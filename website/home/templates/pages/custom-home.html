@@ -1,0 +1,71 @@
+{% extends 'layouts/base_background.html' %}
+{% load static %}
+{% block title %} WayWise {% endblock title %}
+{% block header %} {% endblock header %}
+{% block body %} class="index-page bg-gray-200" {% endblock body %}
+{% block content %}
+<!-- -------- START HEADER 1 w/ text and image on right ------- -->
+<!-- -------- START HEADER 7 w/ card over right bg image ------- -->
+<header>
+    <div class="page-header min-vh-100">
+      <div class="position-absolute fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block" style="background-image: url(https://images.unsplash.com/photo-1632067117908-826d2531dba9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80); background-size:cover;" loading="lazy"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 d-flex justify-content-center flex-column">
+            <div class="card card-body blur d-flex justify-content-center shadow-lg p-5 mt-5">
+              <h1>WayWise</h1>
+              <p class="lead pe-5 me-5">Explore More, Plan Less </p>
+              <div class="buttons">
+                <a href = "{% url 'main' %}">
+                <button type="button" class="btn bg-gradient-primary mt-4">Get Started</button>
+                </a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- -------- END HEADER 8 w/ card over right bg image ------- -->
+<!-- -------- END HEADER 1 w/ text and image on right ------- -->
+{% endblock content %}
+{% block footer %} {% endblock footer %}
+{% block javascripts %}
+<!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+<script src="{% static 'js/plugins/countup.min.js' %}"></script>
+<script src="{% static 'js/plugins/choices.min.js' %}"></script>
+<script src="{% static 'js/plugins/prism.min.js' %}"></script>
+<script src="{% static 'js/plugins/highlight.min.js' %}"></script>
+<!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
+<script src="{% static 'js/plugins/rellax.min.js' %}"></script>
+<!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
+<script src="{% static 'js/plugins/tilt.min.js' %}"></script>
+<!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
+<script src="{% static 'js/plugins/choices.min.js' %}"></script>
+<script type="text/javascript">
+  if (document.getElementById('state1')) {
+    const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+    if (!countUp.error) {
+      countUp.start();
+    } else {
+      console.error(countUp.error);
+    }
+  }
+  if (document.getElementById('state2')) {
+    const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+    if (!countUp1.error) {
+      countUp1.start();
+    } else {
+      console.error(countUp1.error);
+    }
+  }
+  if (document.getElementById('state3')) {
+    const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+    if (!countUp2.error) {
+      countUp2.start();
+    } else {
+      console.error(countUp2.error);
+    };
+  }
+</script>
+{% endblock javascripts %}
