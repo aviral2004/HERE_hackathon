@@ -1,7 +1,8 @@
-#WayWise
+# WayWise
 
-teamname - TeamName
-members
+Teamname - TeamName
+
+Members
 - Ameesh Sethi
 - Aviral Gupta
 - Vishnu Hari
